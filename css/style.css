@@ -1490,3 +1490,83 @@ body::after{
 
   scroll-margin-top: 220px;
 }
+
+/* BACK TO TOP */
+
+.back-to-top{
+
+  position: fixed;
+
+  right: 30px;
+  bottom: 30px;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(15,15,15,0.75);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform:
+    translateY(20px);
+
+  transition:
+    0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 999;
+}
+
+.back-to-top.show{
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform:
+    translateY(0);
+}
+
+.back-to-top:hover{
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(255,0,0,0.25);
+
+  box-shadow:
+    0 10px 35px rgba(255,0,0,0.12);
+}
+
+.back-to-top svg{
+
+  width: 20px;
+  height: 20px;
+
+  stroke-width: 2.2;
+}
