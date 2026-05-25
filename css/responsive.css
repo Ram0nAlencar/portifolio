@@ -1,0 +1,85 @@
+@media(max-width: 768px){
+
+  .navbar{
+    position: relative;
+  }
+
+  .menu-toggle{
+    display: flex;
+  }
+
+  .nav-links{
+    position: absolute;
+
+    top: 80px;
+    right: 0;
+
+    width: 220px;
+
+    background: #0d0d0d;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    flex-direction: column;
+
+    display: none;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+
+  .hero h1{
+    font-size: 2.7rem;
+  }
+
+  .hero-description{
+    font-size: 1rem;
+  }
+
+  .hero-buttons{
+    flex-direction: column;
+  }
+
+  .section-title h2{
+    font-size: 2rem;
+  }
+
+  .project-content{
+    padding: 25px;
+  }
+
+}
+
+/*ABOUT*/
+
+@media(max-width: 980px){
+
+  .about-content{
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+}
+
+/*Contact*/
+@media(max-width: 768px){
+
+  .contact-box{
+
+    padding:
+      60px 30px;
+  }
+
+  .contact-box h2{
+
+    font-size: 2.4rem;
+  }
+
+}
