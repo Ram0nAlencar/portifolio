@@ -492,10 +492,10 @@ html{
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Força 3 colunas iguais */
+    gap: 20px !important;
+    width: 100% !important;
 }
 
 .skills-category-card {

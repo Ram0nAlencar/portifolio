@@ -68,6 +68,16 @@
 
 }
 
+/* Garante a responsividade perfeita para celulares */
+@media (max-width: 992px) {
+    .skills-grid {
+        grid-template-columns: 1fr !important; /* Fica em 1 coluna se a tela for pequena */
+    }
+    .skills-category-card {
+        min-height: auto !important;
+    }
+}
+
 /*Contact*/
 @media(max-width: 768px){
 

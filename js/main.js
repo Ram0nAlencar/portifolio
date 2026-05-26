@@ -77,7 +77,7 @@ gsap.from(".about-content",{
 
 /* PROJECT CARDS */
 
-gsap.from(".project-card",{
+gsap.from(".projects-grid .project-card",{
 
   scrollTrigger: {
     trigger: ".projects-grid",
@@ -93,6 +93,19 @@ gsap.from(".project-card",{
 
   ease: "power4.out"
 
+});
+
+/* SKILLS CARDS ANIMATION */
+gsap.from(".skills-grid .skills-category-card", {
+  scrollTrigger: {
+    trigger: ".skills-grid",       // O gatilho é a própria grade de tecnologias
+    start: "top 85%"              // Começa a animar um pouquinho antes de chegar nela
+  },
+  opacity: 0,
+  y: 80,                          // Surge de baixo para cima igual aos projetos
+  stagger: 0.2,                   // Faz um card aparecer atrás do outro com efeito cascata
+  duration: 1,
+  ease: "power4.out"
 });
 
 /* SPOTLIGHT EFFECT */
