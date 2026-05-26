@@ -367,6 +367,66 @@ html{
   background: rgba(255,255,255,0.05);
 }
 
+/* Estilização dos links de redes sociais no topo */
+.hero-socials {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.hero-socials .social-item {
+    color: var(--text-secondary) !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse: acende em vermelho e sobe de leve */
+.hero-socials .social-item:hover {
+    color: var(--red-primary) !important;
+    transform: translateY(-2px);
+}
+
+/* Estilização dos links de redes sociais no topo */
+.hero-socials {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: flex-start;
+}
+
+.hero-socials .social-item {
+    color: var(--text-secondary) !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Ícone ganha um destaque ligeiramente maior */
+.hero-socials .social-item i {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Efeito Hover */
+.hero-socials .social-item:hover {
+    color: var(--red-primary) !important;
+    transform: translateY(-2px);
+}
+
+.hero-socials .social-item:hover i {
+    color: var(--red-primary) !important;
+}
+
 /* TITLES */
 
 .section{
@@ -421,10 +481,97 @@ html{
 
   color: white;
 }
+/**************Tecnologias**********/
+/* ==========================================================================
+   SEÇÃO DE HABILIDADES (SKILLS)
+   ========================================================================== */
+.skills-section {
+    background: #050505;
+    position: relative;
+    z-index: 2;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skills-category-card {
+    background: rgba(13, 13, 13, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+/* Efeito ao passar o mouse no card da categoria */
+.skills-category-card:hover {
+    border-color: rgba(255, 43, 43, 0.2);
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 43, 43, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.category-icon i {
+    color: var(--red-primary);
+    font-size: 1.5rem;
+}
+
+.skills-category-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Deixa o item da habilidade ligeiramente mais claro no hover */
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+}
+
+.skill-item i {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
 
 
-
-/* ABOUT */
+/************* Sobre **************/
 
 .about-content{
 
@@ -545,182 +692,6 @@ html{
 
   font-size: 0.95rem;
 }
-
-/* STACK */
-
-.stack{
-
-  position: relative;
-}
-
-/* GRID */
-
-.stack-grid{
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 25px;
-}
-
-/* CARD */
-
-.stack-card{
-
-  position: relative;
-
-  padding: 35px;
-
-  border-radius: 24px;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(20,20,20,0.95),
-      rgba(10,10,10,0.98)
-    );
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  overflow: hidden;
-
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-/* GLOW */
-
-.stack-card::before{
-
-  content: '';
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255,0,0,0.10),
-      transparent 60%
-    );
-
-  opacity: 0;
-
-  transition: 0.4s ease;
-}
-
-.stack-card:hover::before{
-  opacity: 1;
-}
-
-/* HOVER */
-
-.stack-card:hover{
-
-  transform:
-    translateY(-8px);
-
-  border-color:
-    rgba(255,0,0,0.18);
-
-  box-shadow:
-    0 12px 40px rgba(255,0,0,0.10);
-}
-
-/* ICON */
-
-.stack-icon{
-
-  width: 65px;
-  height: 65px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 18px;
-
-  background:
-    rgba(255,255,255,0.04);
-
-  border:
-    1px solid rgba(255,255,255,0.06);
-
-  font-size: 1.8rem;
-
-  margin-bottom: 25px;
-}
-
-/* TITLE */
-
-.stack-card h3{
-
-  font-size: 1.2rem;
-
-  margin-bottom: 15px;
-}
-
-/* DESCRIPTION */
-
-.stack-card p{
-
-  color:
-    rgba(255,255,255,0.68);
-
-  line-height: 1.8;
-
-  margin-bottom: 25px;
-}
-
-/* TAGS */
-
-.stack-tags{
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-}
-
-.stack-tags span{
-
-  padding:
-    10px 14px;
-
-  border-radius: 999px;
-
-  background:
-    rgba(255,255,255,0.05);
-
-  border:
-    1px solid rgba(255,255,255,0.08);
-
-  color:
-    rgba(255,255,255,0.75);
-
-  font-size: 0.85rem;
-
-  transition: 0.3s ease;
-}
-
-.stack-tags span:hover{
-
-  border-color:
-    rgba(255,0,0,0.20);
-
-  background:
-    rgba(255,0,0,0.08);
-}
-
-
 /* PROJECTS */
 
 .projects-grid{
@@ -1569,4 +1540,70 @@ body::after{
   height: 20px;
 
   stroke-width: 2.2;
+}
+
+/* ==========================================================================
+   EFEITO VISUAL DA SEÇÃO DE TECNOLOGIAS (EFEITO TRANSPARENTE + MOUSE GLOW)
+   ========================================================================== */
+
+/* 1. Remove o fundo preto sólido que estava tampando a malha quadriculada do site */
+.skills-section {
+    background: transparent !important; /* Faz o fundo do site aparecer por trás */
+    position: relative;
+    z-index: 2;
+}
+
+/* 2. Ajusta os cards para ficarem semi-transparentes com o efeito de vidro fosco */
+.skills-category-card {
+    background: rgba(13, 13, 13, 0.4) !important; /* Fundo escuro mas transparente */
+    backdrop-filter: blur(12px) !important; /* Dá o efeito premium de vidro fosco */
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 3. Ativa e estiliza a luz vermelha interna que vai seguir o seu mouse */
+.skills-category-card .spotlight-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+        rgba(255, 43, 43, 0.06),
+        transparent 40%
+    ) !important;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 4. Ativa e estiliza o brilho na borda que acompanha o mouse */
+.skills-category-card .spotlight-border-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+        rgba(255, 43, 43, 0.25),
+        transparent 40%
+    ) !important;
+    z-index: 0;
+    pointer-events: none;
+    mask: linear-gradient(#fff 0 0) padding-box exclude, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box exclude, linear-gradient(#fff 0 0);
+    padding: 1px;
+}
+
+/* 5. Garante que os ícones e textos fiquem por cima do brilho do mouse */
+.skills-category-card .category-icon,
+.skills-category-card h3,
+.skills-category-card .skills-list {
+    position: relative;
+    z-index: 2;
+}
+
+/* 6. Efeito ao passar o mouse por cima do card inteiro (Hover) */
+.skills-category-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(255, 43, 43, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 43, 43, 0.05) !important;
 }

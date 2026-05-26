@@ -96,23 +96,33 @@ gsap.from(".project-card",{
 });
 
 /* SPOTLIGHT EFFECT */
-
 const spotlightCards = document.querySelectorAll('.spotlight-card');
 
 spotlightCards.forEach((card) => {
-
   card.addEventListener('mousemove', (e) => {
-
     const rect = card.getBoundingClientRect();
-
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
+    // Garante compatibilidade enviando para todos os padrões de variáveis CSS possíveis
     card.style.setProperty('--x', `${x}px`);
     card.style.setProperty('--y', `${y}px`);
+    card.style.setProperty('--mouse-x', `${x}px`);
+    card.style.setProperty('--mouse-y', `${y}px`);
 
+    // Atualiza diretamente os elementos internos de brilho se eles existirem (para os novos cards)
+    const glow = card.querySelector('.spotlight-glow');
+    const borderGlow = card.querySelector('.spotlight-border-glow');
+    
+    if (glow) {
+      glow.style.setProperty('--mouse-x', `${x}px`);
+      glow.style.setProperty('--mouse-y', `${y}px`);
+    }
+    if (borderGlow) {
+      borderGlow.style.setProperty('--mouse-x', `${x}px`);
+      borderGlow.style.setProperty('--mouse-y', `${y}px`);
+    }
   });
-
 });
 
 /* YEAR */
