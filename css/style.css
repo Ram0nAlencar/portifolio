@@ -1690,3 +1690,52 @@ body::after{
     border-color: rgba(255, 43, 43, 0.2) !important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 43, 43, 0.05) !important; /* Suavizei a sombra também para combinar */
 }
+
+/* ==========================================================================
+   ALINHAMENTO E CENTRALIZAÇÃO DO FOOTER (RODAPÉ)
+   ========================================================================== */
+.footer {
+    width: 100% !important;
+    padding: 40px 0 !important;
+    background-color: #0a0a0a !important; /* Mantém o fundo escuro do tema */
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important; /* Linha sutil separando o conteúdo */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Força o container interno a empilhar tudo no centro */
+.footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: 12px !important; /* Espaçamento controlado entre o logo, o copyright e o texto */
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.9rem !important;
+}
+
+/* Garante o destaque correto do logo no centro */
+.footer-logo {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 4px !important;
+}
+
+/* O pontinho vermelho neon do seu nome */
+.footer-logo span {
+    color: var(--red-primary, #ff2b2b) !important;
+}
+
+/* Estilização do texto menor de baixo */
+.footer-subtext {
+    font-size: 0.8rem !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    max-width: 450px !important; /* Limita a largura para o texto quebrar bonito no centro */
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
